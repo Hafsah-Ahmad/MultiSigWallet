@@ -42,7 +42,7 @@ contract MultiSigWallet {
 
     /* ========== CONSTRUCTOR ========== */
     constructor(address[] memory _owners, uint _required) {
-        // TODO: set owners and required confirmations
+        // set owners and required confirmations
     }
 
     /* ========== FUNCTIONS ========== */
