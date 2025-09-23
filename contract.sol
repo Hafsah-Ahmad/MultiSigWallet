@@ -69,7 +69,7 @@ contract MultiSigWallet {
         txExists(_txId) 
         notExecuted(_txId) 
     {
-        // TODO: execute if enough confirmations
+        // TODO: 
     }
 
     function revokeConfirmation(uint _txId) 
