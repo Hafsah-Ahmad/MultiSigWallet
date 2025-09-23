@@ -60,7 +60,7 @@ contract MultiSigWallet {
         notExecuted(_txId) 
         notConfirmed(_txId) 
     {
-        // TODO: mark confirmation
+        //  mark confirmation
     }
 
     function executeTransaction(uint _txId) 
