@@ -78,6 +78,6 @@ contract MultiSigWallet {
         txExists(_txId) 
         notExecuted(_txId) 
     {
-        // TODO: remove confirmation
+        
     }
 }
