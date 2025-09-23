@@ -50,7 +50,7 @@ contract MultiSigWallet {
         public 
         onlyOwner 
     {
-        // TODO: store new transaction
+        //  store new transaction
     }
 
     function confirmTransaction(uint _txId) 
