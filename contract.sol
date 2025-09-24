@@ -58,7 +58,7 @@ contract MultiSigWallet {
     }
 
   
-    /// @notice Create a multisig wallet
+    
     /// @param _owners list of initial owners
     /// @param _required number of confirmations required for execution
     constructor(address[] memory _owners, uint256 _required) {
