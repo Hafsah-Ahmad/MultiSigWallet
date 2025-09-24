@@ -59,7 +59,7 @@ contract MultiSigWallet {
 
   
     
-    /// @param _owners list of initial owners
+    
     /// @param _required number of confirmations required for execution
     constructor(address[] memory _owners, uint256 _required) {
         require(_owners.length > 0, "MultiSig: owners required");
