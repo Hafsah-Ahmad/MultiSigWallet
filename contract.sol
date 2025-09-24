@@ -35,7 +35,7 @@ contract MultiSigWallet {
     event RevokeConfirmation(address indexed owner, uint256 indexed txId);
     event ExecuteTransaction(address indexed owner, uint256 indexed txId);
 
-    /* ========== MODIFIERS ========== */
+    
 
     modifier onlyOwner() {
         require(isOwner[msg.sender], "MultiSig: not owner");
