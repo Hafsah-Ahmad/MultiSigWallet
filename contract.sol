@@ -87,7 +87,7 @@ contract MultiSigWallet {
         emit Deposit(msg.sender, msg.value, address(this).balance);
     }
 
-    /* ========== EXTERNAL FUNCTIONS ========== */
+
 
     /// @notice Submit a transaction proposal to the wallet
     /// @param _to recipient address
