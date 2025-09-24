@@ -81,7 +81,7 @@ contract MultiSigWallet {
         required = _required;
     }
 
-    /* ========== RECEIVE / FALLBACK ========== */
+   
 
     receive() external payable {
         emit Deposit(msg.sender, msg.value, address(this).balance);
