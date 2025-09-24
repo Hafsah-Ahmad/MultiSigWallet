@@ -3,11 +3,11 @@ pragma solidity ^0.8.28;
 
 
 contract MultiSigWallet {
-    /* ========== STATE ========== */
+    
 
     address[] public owners;
     mapping(address => bool) public isOwner;
-    uint256 public required; // number of confirmations required
+    uint256 public required; 
 
     struct Transaction {
         address to;
@@ -21,7 +21,7 @@ contract MultiSigWallet {
     mapping(uint256 => mapping(address => bool)) public isConfirmed;
     Transaction[] public transactions;
 
-    /* ========== EVENTS ========== */
+   
 
     event Deposit(address indexed sender, uint256 amount, uint256 balance);
     event SubmitTransaction(
