@@ -57,8 +57,7 @@ contract MultiSigWallet {
         _;
     }
 
-    /* ========== CONSTRUCTOR ========== */
-
+  
     /// @notice Create a multisig wallet
     /// @param _owners list of initial owners
     /// @param _required number of confirmations required for execution
