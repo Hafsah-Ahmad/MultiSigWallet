@@ -92,7 +92,7 @@ contract MultiSigWallet {
     
     
    
-    /// @param _data calldata payload (optional)
+    
     /// @return txId the id of the submitted transaction
     function submitTransaction(
         address _to,
