@@ -162,7 +162,6 @@ contract MultiSigWallet {
         emit ExecuteTransaction(msg.sender, _txId);
     }
 
-    /* ========== VIEW HELPERS ========== */
 
     function getOwners() external view returns (address[] memory) {
         return owners;
