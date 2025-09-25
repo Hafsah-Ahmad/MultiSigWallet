@@ -89,7 +89,7 @@ contract MultiSigWallet {
 
 
 
-    /// @notice Submit a transaction proposal to the wallet
+    
     /// @param _to recipient address
     /// @param _value amount of wei to send
     /// @param _data calldata payload (optional)
