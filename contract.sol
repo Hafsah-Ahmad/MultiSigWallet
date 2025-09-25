@@ -124,7 +124,7 @@ contract MultiSigWallet {
         emit ConfirmTransaction(msg.sender, _txId);
     }
 
-    /// @notice Revoke a prior confirmation
+    
     /// @param _txId transaction id
     function revokeConfirmation(uint256 _txId)
         external
