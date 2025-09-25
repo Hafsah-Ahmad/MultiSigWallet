@@ -108,7 +108,7 @@ contract MultiSigWallet {
         emit SubmitTransaction(msg.sender, txId, _to, _value, _data);
     }
 
-    /// @notice Confirm a transaction
+   
     /// @param _txId transaction id
     function confirmTransaction(uint256 _txId)
         external
