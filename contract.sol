@@ -109,7 +109,7 @@ contract MultiSigWallet {
     }
 
    
-    /// @param _txId transaction id
+    
     function confirmTransaction(uint256 _txId)
         external
         onlyOwner
