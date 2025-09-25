@@ -91,7 +91,7 @@ contract MultiSigWallet {
 
     
     
-    /// @param _value amount of wei to send
+   
     /// @param _data calldata payload (optional)
     /// @return txId the id of the submitted transaction
     function submitTransaction(
