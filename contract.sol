@@ -88,12 +88,6 @@ contract MultiSigWallet {
     }
 
 
-
-    
-    
-   
-    
-    /// @return txId the id of the submitted transaction
     function submitTransaction(
         address _to,
         uint256 _value,
