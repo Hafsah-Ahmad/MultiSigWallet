@@ -124,8 +124,7 @@ contract MultiSigWallet {
         emit ConfirmTransaction(msg.sender, _txId);
     }
 
-    
-    /// @param _txId transaction id
+
     function revokeConfirmation(uint256 _txId)
         external
         onlyOwner
@@ -141,8 +140,6 @@ contract MultiSigWallet {
         emit RevokeConfirmation(msg.sender, _txId);
     }
 
-    /// @notice Execute a confirmed transaction
-    /// @param _txId transaction id
     function executeTransaction(uint256 _txId)
         external
         onlyOwner
@@ -157,7 +154,6 @@ contract MultiSigWallet {
 
         transaction.executed = true;
 
-        // solhint-disable-next-line avoid-low-level-calls
         (bool success, ) = transaction.to.call{value: transaction.value}(
             transaction.data
         );
