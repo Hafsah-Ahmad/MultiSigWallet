@@ -214,7 +214,6 @@ contract MultiSigWallet {
     function removeOwner(address _owner) external onlySelf {
         require(isOwner[_owner], "MultiSig: not owner");
 
-        // find & remove from owners array
         uint256 len = owners.length;
         for (uint256 i = 0; i < len; i++) {
             if (owners[i] == _owner) {
