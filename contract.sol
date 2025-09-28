@@ -20,7 +20,7 @@ contract MultiSigWallet {
     Transaction[] public transactions;
 
     bool public paused;
-    uint256 public executionDelay; // seconds delay required between submit and execute
+    uint256 public executionDelay; 
     uint256 public txExecutionReward; // fixed reward in wei to pay executor (optional)
 
     event Deposit(address indexed sender, uint256 amount, uint256 balance);
