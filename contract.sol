@@ -189,7 +189,7 @@ contract MultiSigWallet {
 
         // pay executor reward if configured (best-effort, don't revert if send fails)
         if (txExecutionReward > 0) {
-            // ensure contract has enough balance (silent failure allowed)
+            
             if (address(this).balance >= txExecutionReward) {
                 (bool sent, ) = payable(msg.sender).call{value: txExecutionReward}("");
                 (sent); // we ignore result to avoid reverting on reward failure
@@ -317,3 +317,4 @@ contract MultiSigWallet {
         return ids;
     }
 }
+
