@@ -20,8 +20,9 @@ contract MultiSigWallet {
     Transaction[] public transactions;
 
     bool public paused;
-    uint256 public executionDelay; 
-    uint256 public txExecutionReward; 
+    uint256 public executionDelay; // seconds delay required between submit and execute
+    uint256 public txExecutionReward; // fixed reward in wei to pay executor (optional)
+
     event Deposit(address indexed sender, uint256 amount, uint256 balance);
     event SubmitTransaction(
         address indexed owner,
@@ -188,7 +189,7 @@ contract MultiSigWallet {
 
         // pay executor reward if configured (best-effort, don't revert if send fails)
         if (txExecutionReward > 0) {
-            
+            // ensure contract has enough balance (silent failure allowed)
             if (address(this).balance >= txExecutionReward) {
                 (bool sent, ) = payable(msg.sender).call{value: txExecutionReward}("");
                 (sent); // we ignore result to avoid reverting on reward failure
@@ -213,6 +214,7 @@ contract MultiSigWallet {
     function removeOwner(address _owner) external onlySelf {
         require(isOwner[_owner], "MultiSig: not owner");
 
+        // find & remove from owners array
         uint256 len = owners.length;
         for (uint256 i = 0; i < len; i++) {
             if (owners[i] == _owner) {
@@ -315,4 +317,3 @@ contract MultiSigWallet {
         return ids;
     }
 }
-
