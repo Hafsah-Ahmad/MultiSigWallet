@@ -36,31 +36,13 @@ Start a local Hardhat node:
 -In a new terminal, deploy the contract:
 -npx hardhat run scripts/deploy.js --network localhost
 
- Usage Example (scripts/interact.js)
-
-The provided script demonstrates:
-
-Submitting a transaction
-
-Confirming by another owner
-
-Executing the transaction
-
-Run it with:
-
-npx hardhat run scripts/interact.js --network localhost
-
-⚙️ Constructor Parameters
-
+ 
+Constructor Parameters=
 When deploying, provide:
-
-address[] _owners → array of wallet owners
-
-uint256 _required → number of confirmations required
-
-uint256 _executionDelay → timelock in seconds
-
-uint256 _txExecutionReward → fixed reward for executors (in wei)
+-address[] _owners → array of wallet owners
+-uint256 _required → number of confirmations required
+-uint256 _executionDelay → timelock in seconds
+-uint256 _txExecutionReward → fixed reward for executors (in wei)
 
 Example:
 
@@ -69,60 +51,34 @@ required = 2
 executionDelay = 60       // 60 seconds timelock
 txExecutionReward = 10000 // optional reward in wei
 
-🔑 Key Functions
+ Key Functions=
+-submitTransaction(address to, uint value, bytes data, uint expiration)
+-confirmTransaction(uint txId)
+-revokeConfirmation(uint txId)
+-executeTransaction(uint txId)
+-addOwner(address owner)
+-removeOwner(address owner)
+-pause() / unpause()
+-setExecutionReward(uint reward)
+-setExecutionDelay(uint delay)
+-getTransaction(uint txId)
 
-submitTransaction(address to, uint value, bytes data, uint expiration)
-
-confirmTransaction(uint txId)
-
-revokeConfirmation(uint txId)
-
-executeTransaction(uint txId)
-
-addOwner(address owner)
-
-removeOwner(address owner)
-
-pause() / unpause()
-
-setExecutionReward(uint reward)
-
-setExecutionDelay(uint delay)
-
-getTransaction(uint txId)
-
-🧪 Testing
-
+Testing=
 The tests cover:
-
-Deployment
-
-Submitting, confirming, and executing a transaction
-
-Requiring multiple confirmations
-
-Timelock enforcement
-
-Expiration logic
-
-Daily spending limits
+-Deployment
+-Submitting, confirming, and executing a transaction
+-Requiring multiple confirmations
+-Timelock enforcement
+-Expiration logic
+-Daily spending limits
 
 Run:
-
 npx hardhat test
 Notes
 
-The contract is upgrade-safe (no hard-coded owners).
-
-Use pause() in emergencies to stop new transactions.
-
-Executor rewards are optional and only paid if the contract has sufficient balance.
 
 Author
-
 Developed by Hafsa Ahmad ✨
 
-
  License
-
 This project is licensed under the MIT License.
