@@ -142,3 +142,7 @@ Author
 
 Developed by Hafsa Ahmad ✨
 
+
+📄 License
+
+This project is licensed under the MIT License.
