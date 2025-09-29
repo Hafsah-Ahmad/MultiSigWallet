@@ -1,62 +1,42 @@
-MultiSig Wallet (with Timelock, Daily Limit, and Expiration)
+                          MultiSig Wallet (with Timelock, Daily Limit, and Expiration)
 
 A Multi-Signature Wallet smart contract written in Solidity.
 This wallet requires a predefined number of owner approvals before executing transactions.
 It includes additional advanced features like timelock, daily spending limit, transaction expiration, pause/unpause, and executor rewards.
 
-✨ Features
-
+ Features=
 ✅ Multiple owners with customizable confirmation requirements
-
 ✅ Timelock (delay between submission & execution)
-
 ✅ Transaction expiration support
-
 ✅ Daily spending limit
-
 ✅ Pause / unpause the contract (emergency stop)
-
 ✅ Add/remove owners via consensus
-
 ✅ Execution reward (optional gas reimbursement for executor)
-
 ✅ Full Hardhat project with scripts & tests
 
-🛠 Tech Stack
+ Tech Stack=
+-Solidity ^0.8.28
+-Hardhat (development & testing)
+-Chai / Mocha (unit testing)
+-Ethers.js (deployment & interaction)
 
-Solidity ^0.8.28
-
-Hardhat (development & testing)
-
-Chai / Mocha (unit testing)
-
-Ethers.js (deployment & interaction)
-
-
-Getting Started
+Getting Started=
 1. Clone repo & install dependencies
 git clone https://github.com/your-username/MultiSigWallet.git
 cd MultiSigWallet
 npm install
-
 2. Compile contracts
 npx hardhat compile
-
 3. Run tests
 npx hardhat test
-
 4. Deploy to local network
 
 Start a local Hardhat node:
+-npx hardhat node
+-In a new terminal, deploy the contract:
+-npx hardhat run scripts/deploy.js --network localhost
 
-npx hardhat node
-
-
-In a new terminal, deploy the contract:
-
-npx hardhat run scripts/deploy.js --network localhost
-
-📜 Usage Example (scripts/interact.js)
+ Usage Example (scripts/interact.js)
 
 The provided script demonstrates:
 
@@ -143,6 +123,6 @@ Author
 Developed by Hafsa Ahmad ✨
 
 
-📄 License
+ License
 
 This project is licensed under the MIT License.
