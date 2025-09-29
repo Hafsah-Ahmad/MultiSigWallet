@@ -137,3 +137,8 @@ The contract is upgrade-safe (no hard-coded owners).
 Use pause() in emergencies to stop new transactions.
 
 Executor rewards are optional and only paid if the contract has sufficient balance.
+
+Author
+
+Developed by Hafsa Ahmad ✨
+
